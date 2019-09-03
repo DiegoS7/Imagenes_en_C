@@ -25,5 +25,17 @@ namespace Navegador
                 this.Text = string.Concat("Visor de Imagenes(" + openFileDialog1.FileName + ")");
             }
         }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("Calc");
+        }
+
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel2.LinkVisited = true;
+            System.Diagnostics.Process.Start("IExplore", "http://www.ucol.mx");
+        }
     }
 }
